@@ -5,12 +5,12 @@ const weatherDetails = document.querySelector('.weather-details');
 const error404 = document.querySelector('.not-found');
 
 search.addEventListener('click', () =>{
-    //const APIKey = '2602095716b9159ec866a00c6a9c8c9a';
+    const APIKey = '2602095716b9159ec866a00c6a9c8c9a';
     const  city = document.querySelector('.search-box input').value;
 
     if (city == '')
         return;
-    //fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`) 
     .then(response => response.json())
     .then(json => {
         
